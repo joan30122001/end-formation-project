@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet de fin de formation</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Tirage au Sors des Projets de Fin de Formation</h1>
+        <!-- <p>Click on the cards to reveal the hidden text!</p> -->
+    </header>
+    <div class="container mt-5">
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card-container">
+                    <div class="card-flip" id="card1">
+                        <div class="card front">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Projet 1</h5>
+                            </div>
+                        </div>
+                        <div class="card back">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Application de gestion d'articles(Blog)</h5>
+                                <h1>DUREL</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-container">
+                    <div class="card-flip" id="card2">
+                        <div class="card front">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Projet 2</h5>
+                            </div>
+                        </div>
+                        <div class="card back">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Application de gestion de stocks</h5>
+                                <h1>JORDAN</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-container">
+                    <div class="card-flip" id="card3">
+                        <div class="card front">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Projet 3</h5>
+                            </div>
+                        </div>
+                        <div class="card back">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Application de gestion des présences</h5>
+                                <h1>DAREL</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- <h2 class="text-center mb-4">Détails des différents projets</h2> -->
+        <div class="title-section">
+            <h2>Détails des différents projets</h2>
+        </div>
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="images/presence.jfif" alt="Attendance App" class="project-image">
+                <div class="project-content">
+                    <h4 class="project-title">Application de gestion des présences</h4>
+                    <p class="project-text">Aide à surveiller la présence des des étudiants en les marquant présent ou absent.</p>
+                    <!-- <a href="" class="btn btn-primary">Voir le détail</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalPresence">Voir le détail</button>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/stock.jpg" alt="Stock Management" class="project-image">
+                <div class="project-content">
+                    <h4 class="project-title">Application de gestion de stocks</h4>
+                    <p class="project-text">Offre une solution complète pour le suivi et la gestion des stocks.</p>
+                    <!-- <a href="" class="btn btn-primary">Voir le détail</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalStock">Voir le détail</button>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/blog.jpg" alt="Blog App" class="project-image">
+                <div class="project-content">
+                    <h4 class="project-title">Application de gestion d'articles (Blog)</h4>
+                    <p class="project-text">Cette application permet aux utilisateurs de créer, publier et gérer des articles de blog.</p>
+                    <!-- <a href="" class="btn btn-primary">Voir le détail</a> -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalBlog">Voir le détail</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modals -->
+    <div class="modal fade" id="modalPresence" tabindex="-1" aria-labelledby="modalLabelPresence" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabelPresence">Application de gestion des présences</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Aide à surveiller la présence des étudiants en les marquant présent ou absent.</p><br>
+                    <p><b>Objectifs</b></p>
+                    <ul>
+                        <li> Créer des étudiants(nom, prenom, age, bio, image, status(absent par défaut), classe)</li>
+                        <li> Modifier les informations d'un étudiant ainsi que son image</li>
+                        <li> Pouvoir supprimer un étudiant avec confirmation</li>
+                        <li> Lors de l'affichage des étudiants on doit voir leur status qui est absent par défaut et pouvoir le modifier à "présent" s'il est présent</li>
+                        <br>
+                        <p><b>NB: Ajouter une touche particulière</b></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalStock" tabindex="-1" aria-labelledby="modalLabelStock" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabelStock">Application de gestion de stocks</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Offre une solution complète pour le suivi et la gestion des stocks.</p><br>
+                    <p><b>Objectifs</b></p>
+                    <ul>
+                        <li> Créer des produits(nom, quantité, prix, description, image, status(disponible par défaut))</li>
+                        <li> Modifier un produit ainsi que son image</li>
+                        <li> Pouvoir supprimer un produit avec confirmation</li>
+                        <li> Lors de l'affichage des produits on doit voir leur status qui est "disponible" par défaut et pouvoir le modifier à "pas disponible" si la quantité est 0</li>
+                        <br>
+                        <p><b>NB: Ajouter une touche particulière</b></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalBlog" tabindex="-1" aria-labelledby="modalLabelBlog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabelBlog">Application de gestion d'articles (Blog)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Cette application permet aux utilisateurs de créer, publier et gérer des articles de blog.</p><br>
+                    <p><b>Objectifs</b></p>
+                    <ul>
+                        <li> Créer des articles(titre, description, image, status("Non vérifié" par défaut))</li>
+                        <li> Modifier un article ainsi que son image</li>
+                        <li> Pouvoir supprimer un article avec confirmation</li>
+                        <li> Lors de l'affichage des articles on doit voir leur status qui est "non vérifié" par défaut et pouvoir le modifier(par l'administrateur) à "vérifié" et le status doit changer.</li>
+                        <br>
+                        <p><b>NB: Ajouter une touche particulière</b></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
